@@ -1,3 +1,87 @@
 vitalii@vitalii-VirtualBox:~$ mkdir cursor
+
 vitalii@vitalii-VirtualBox:~$ > test.txt
-vitalii@vitalii-VirtualBox:~$ 
+
+vitalii@vitalii-VirtualBox:~$ cp ~/test.txt ~/cursor/
+
+vitalii@vitalii-VirtualBox:~$ ls
+cursor   Documents  Music     Public  snap       test.txt
+Desktop  Downloads  Pictures  shared  Templates  Videos
+
+vitalii@vitalii-VirtualBox:~$ ls -la ~/ -r
+total 100
+drwxr-xr-x  2 vitalii vitalii 4096 лют 18 15:54 Videos
+-rw-r-----  1 vitalii vitalii    5 лют 18 20:52 .vboxclient-seamless.pid
+-rw-r-----  1 vitalii vitalii    5 лют 18 20:52 .vboxclient-draganddrop.pid
+-rw-r-----  1 vitalii vitalii    5 лют 18 20:52 .vboxclient-display-svga-x11.pid
+-rw-r-----  1 vitalii vitalii    5 лют 18 20:52 .vboxclient-clipboard.pid
+-rw-rw-r--  1 vitalii vitalii    0 лют 18 22:13 test.txt
+drwxr-xr-x  2 vitalii vitalii 4096 лют 18 15:54 Templates
+-rw-r--r--  1 vitalii vitalii    0 лют 18 20:51 .sudo_as_admin_successful
+drwx------  2 vitalii vitalii 4096 лют 18 20:49 .ssh
+drwxr-xr-x  3 vitalii vitalii 4096 лют 18 20:53 snap
+lrwxrwxrwx  1 vitalii vitalii   16 лют 18 21:20 shared -> /media/sf_shared
+drwxr-xr-x  2 vitalii vitalii 4096 лют 18 15:54 Public
+-rw-r--r--  1 vitalii vitalii  807 лют 18 15:10 .profile
+drwxr-xr-x  2 vitalii vitalii 4096 лют 18 15:54 Pictures
+drwxr-xr-x  2 vitalii vitalii 4096 лют 18 15:54 Music
+drwxr-xr-x  3 vitalii vitalii 4096 лют 18 15:54 .local
+drwx------  3 vitalii vitalii 4096 лют 18 20:54 .gnupg
+drwxr-xr-x  2 vitalii vitalii 4096 лют 18 15:54 Downloads
+drwxr-xr-x  2 vitalii vitalii 4096 лют 18 15:54 Documents
+drwxr-xr-x  2 vitalii vitalii 4096 лют 18 15:54 Desktop
+drwxrwxr-x  2 vitalii vitalii 4096 лют 18 22:51 cursor
+drwxr-xr-x 14 vitalii vitalii 4096 лют 18 22:51 .config
+drwx------ 12 vitalii vitalii 4096 лют 18 20:53 .cache
+-rw-r--r--  1 vitalii vitalii 3771 лют 18 15:10 .bashrc
+-rw-r--r--  1 vitalii vitalii  220 лют 18 15:10 .bash_logout
+-rw-------  1 vitalii vitalii  442 лют 18 21:24 .bash_history
+drwxr-xr-x  3 root    root    4096 лют 18 15:10 ..
+drwxr-xr-x 17 vitalii vitalii 4096 лют 18 22:13 .
+
+vitalii@vitalii-VirtualBox:~$ cd cursor
+vitalii@vitalii-VirtualBox:~/cursor$ mv test.txt new_test.txt
+
+vitalii@vitalii-VirtualBox:~/cursor$ rm test.txt new_test.txt
+
+vitalii@vitalii-VirtualBox:~/cursor$ touch -t 202001010415 hw.txt
+
+vitalii@vitalii-VirtualBox:~/cursor$ touch hw.sh, hw1.sh, hw2.sh, hw1.txt
+
+vitalii@vitalii-VirtualBox:~/cursor$ ls | grep \.sh
+hw1.sh,
+hw2.sh,
+hw.sh,
+
+vitalii@vitalii-VirtualBox:~/cursor$ cp -t new *.txt
+
+vitalii@vitalii-VirtualBox:~/cursor$ echo "cursor" >hw.txt
+
+vitalii@vitalii-VirtualBox:~/cursor$ cat hw.txt
+cursor
+
+vitalii@vitalii-VirtualBox:~/cursor$ chmod 066 hw.txt
+vitalii@vitalii-VirtualBox:~/cursor$ cat hw.txt
+cat: hw.txt: Permission denied
+
+vitalii@vitalii-VirtualBox:~/cursor$ chmod 766 hw.txt
+vitalii@vitalii-VirtualBox:~/cursor$ cat hw.txt
+cursor
+
+vitalii@vitalii-VirtualBox:~/cursor$ gedit hw.txt
+
+vitalii@vitalii-VirtualBox:~/cursor$ head -n 7 hw.txt
+cursor
+1
+2
+3
+4
+5
+6
+
+vitalii@vitalii-VirtualBox:~/cursor$ touch test.sh
+vitalii@vitalii-VirtualBox:~/cursor$ echo "echo 'Hello'" >test.sh
+
+vitalii@vitalii-VirtualBox:~/cursor$ chmod 766 test.sh
+vitalii@vitalii-VirtualBox:~/cursor$ ./test.sh
+
