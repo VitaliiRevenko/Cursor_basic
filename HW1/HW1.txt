@@ -4,9 +4,19 @@ vitalii@vitalii-VirtualBox:~$ > test.txt
 
 vitalii@vitalii-VirtualBox:~$ cp ~/test.txt ~/cursor/
 
-vitalii@vitalii-VirtualBox:~$ ls
-cursor   Documents  Music     Public  snap       test.txt
-Desktop  Downloads  Pictures  shared  Templates  Videos
+vitalii@vitalii-VirtualBox:~/cursor$ ll
+total 20
+drwxrwxr-x  3 vitalii vitalii 4096 лют 19 23:47 ./
+drwxr-xr-x 17 vitalii vitalii 4096 лют 19 19:18 ../
+-rw-rw-r--  1 vitalii vitalii    0 лют 19 14:32 .gitconfig
+-rw-rw-r--  1 vitalii vitalii    0 лют 19 00:07 hw1.sh
+-rw-rw-r--  1 vitalii vitalii    0 лют 19 00:07 hw1.txt
+-rw-rw-r--  1 vitalii vitalii    0 лют 19 00:07 hw2.sh
+-rw-rw-r--  1 vitalii vitalii    0 лют 19 00:07 hw.shh
+-rwxrw-rw-  1 vitalii vitalii   28 лют 19 01:19 hw.txt*
+drwxrwxr-x  2 vitalii vitalii 4096 лют 19 00:44 new/
+-rwxrw-rw-  1 vitalii vitalii   13 лют 19 01:33 test.sh*
+
 
 vitalii@vitalii-VirtualBox:~$ ls -la ~/ -r
 total 100
@@ -48,10 +58,16 @@ vitalii@vitalii-VirtualBox:~/cursor$ touch -t 202001010415 hw.txt
 
 vitalii@vitalii-VirtualBox:~/cursor$ touch hw.sh, hw1.sh, hw2.sh, hw1.txt
 
-vitalii@vitalii-VirtualBox:~/cursor$ ls | grep \.sh
-hw1.sh,
-hw2.sh,
-hw.sh,
+          #8. List all files (only with the extension .sh) in the current directory.
+          #Note that the ls command can accept more than one parameter for what files you want it to list.
+          #Hint: Use grep
+
+vitalii@vitalii-VirtualBox:~/cursor$ ls |grep .sh
+hw1.sh
+hw2.sh
+hw.sh
+test.sh
+
 
 vitalii@vitalii-VirtualBox:~/cursor$ cp -t new *.txt
 
