@@ -64,11 +64,9 @@ vitalii@vitalii-VirtualBox:~/cursor$ touch hw.sh, hw1.sh, hw2.sh, hw1.txt
           #Note that the ls command can accept more than one parameter for what files you want it to list.
           #Hint: Use grep
 
-vitalii@vitalii-VirtualBox:~/cursor$ ls |grep .sh
-hw1.sh
-hw2.sh
-hw.sh
-test.sh
+vitalii@vitalii-VirtualBox:~/cursor$ ls *.sh
+hw1.sh  hw2.sh  test.sh
+
 
 
 vitalii@vitalii-VirtualBox:~/cursor$ cp -t new *.txt
