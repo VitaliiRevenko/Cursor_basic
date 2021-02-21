@@ -1,183 +1,79 @@
 vitalii@vitalii-VirtualBox:~/cursor$ mkdir cursor_git_hw
-vitalii@vitalii-VirtualBox:~/cursor$ ll
-total 24
-drwxrwxr-x  4 vitalii vitalii 4096 лют 20 18:43 ./
-drwxr-xr-x 17 vitalii vitalii 4096 лют 19 19:18 ../
-drwxrwxr-x  2 vitalii vitalii 4096 лют 20 18:43 cursor_git_hw/
--rw-rw-r--  1 vitalii vitalii    0 лют 19 14:32 .gitconfig
--rw-rw-r--  1 vitalii vitalii    0 лют 19 00:07 hw1.sh
--rw-rw-r--  1 vitalii vitalii    0 лют 19 00:07 hw1.txt
--rw-rw-r--  1 vitalii vitalii    0 лют 19 00:07 hw2.sh
--rw-rw-r--  1 vitalii vitalii    0 лют 19 00:07 hw.shh
--rwxrw-rw-  1 vitalii vitalii   28 лют 19 01:19 hw.txt*
-drwxrwxr-x  2 vitalii vitalii 4096 лют 19 00:44 new/
--rwxrw-rw-  1 vitalii vitalii   13 лют 19 01:33 test.sh*
 vitalii@vitalii-VirtualBox:~/cursor$ cd cursor_git_hw
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ touch first.txt
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-fatal: not a git repository (or any of the parent directories): .git
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ 
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git init
 Initialized empty Git repository in /home/vitalii/cursor/cursor_git_hw/.git/
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch master
-
-No commits yet
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	first.txt
-
-nothing added to commit but untracked files present (use "git add" to track)
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git remote add origin https://github.com/VitaliiRevenko/cursor_git_hw.git
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git remote -v
+origin	https://github.com/VitaliiRevenko/cursor_git_hw.git (fetch)
+origin	https://github.com/VitaliiRevenko/cursor_git_hw.git (push)
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ touch first.txt
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git add first.txt
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch master
-
-No commits yet
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-	new file:   first.txt
-
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git commit -m "adding first.txt"
-[master (root-commit) 04fa489] adding first.txt
+[master (root-commit) 02f1d8c] adding first.txt
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 first.txt
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git log
-commit 04fa489eac5187ed60ebcb51fb86799f365d3d9b (HEAD -> master)
+commit 02f1d8cc48f11c770eb12eb74789286a01ef5d6f (HEAD -> master)
 Author: Vitalii Revenko <vitalyrevenko84@gmail.com>
-Date:   Sat Feb 20 18:56:04 2021 +0200
+Date:   Sun Feb 21 19:43:24 2021 +0200
 
     adding first.txt
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ touch second.txt
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git add second.txt
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git commit -m "adding second.txt"
-[master 4900990] adding second.txt
+[master dd9c92a] adding second.txt
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 second.txt
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch master
-nothing to commit, working tree clean
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git rm first.txt
-rm 'first.txt'
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch master
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	deleted:    first.txt
-
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ rm first.txt
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git add first.txt
-fatal: pathspec 'first.txt' did not match any files
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git add --all
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch master
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	deleted:    first.txt
-
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git commit -m "removing first.txt"
-[master bed5573] removing first.txt
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git commit -m ""removing first.txt
+[master 078d463] removing
  1 file changed, 0 insertions(+), 0 deletions(-)
  delete mode 100644 first.txt
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git log
-commit bed557398ab46f46b1e10343b74c4c2de921b5f5 (HEAD -> master)
+commit 078d463031ed5b5fc665dbbd60129f8eb36921dd (HEAD -> master)
 Author: Vitalii Revenko <vitalyrevenko84@gmail.com>
-Date:   Sun Feb 21 11:33:12 2021 +0200
+Date:   Sun Feb 21 19:48:05 2021 +0200
 
-    removing first.txt
+    removing
 
-commit 4900990e61af91cef3cf5213349d7c4db7ab2229
+commit dd9c92aa94a293b05240b3cad34394be95773a05
 Author: Vitalii Revenko <vitalyrevenko84@gmail.com>
-Date:   Sun Feb 21 11:08:45 2021 +0200
+Date:   Sun Feb 21 19:46:22 2021 +0200
 
     adding second.txt
 
-commit 04fa489eac5187ed60ebcb51fb86799f365d3d9b
+commit 02f1d8cc48f11c770eb12eb74789286a01ef5d6f
 Author: Vitalii Revenko <vitalyrevenko84@gmail.com>
-Date:   Sat Feb 20 18:56:04 2021 +0200
+Date:   Sun Feb 21 19:43:24 2021 +0200
 
     adding first.txt
 
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git remote add master https://github.com/VitaliiRevenko/Cursor_basic
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push master
-fatal: The current branch master has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream master master
-
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push --set-upstream master master
-Username for 'https://github.com': VitaliiRevenko
-Password for 'https://VitaliiRevenko@github.com': 
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push origin master
+Username for 'https://github.com': vitaliirevenko
+Password for 'https://vitaliirevenko@github.com': 
 Enumerating objects: 7, done.
 Counting objects: 100% (7/7), done.
 Delta compression using up to 2 threads
 Compressing objects: 100% (4/4), done.
-Writing objects: 100% (7/7), 665 bytes | 332.00 KiB/s, done.
+Writing objects: 100% (7/7), 658 bytes | 219.00 KiB/s, done.
 Total 7 (delta 0), reused 0 (delta 0)
-remote: 
-remote: Create a pull request for 'master' on GitHub by visiting:
-remote:      https://github.com/VitaliiRevenko/Cursor_basic/pull/new/master
-remote: 
-To https://github.com/VitaliiRevenko/Cursor_basic
+To https://github.com/VitaliiRevenko/cursor_git_hw.git
  * [new branch]      master -> master
-Branch 'master' set up to track remote branch 'master' from 'master'.
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push
-Username for 'https://github.com': vitaliirevenko
-Password for 'https://vitaliirevenko@github.com': 
-Everything up-to-date
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git branch
-* master
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git branch first
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git branch
   first
 * master
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git checkout second
-error: pathspec 'second' did not match any file(s) known to git
+
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git checkout -b second
 Switched to a new branch 'second'
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git branch
-  first
-  master
-* second
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ echo "hello" >second.txt
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push
-fatal: No configured push destination.
-Either specify the URL from the command-line or configure a remote repository using
-
-    git remote add <name> <url>
-
-and then push using the remote name
-
-    git push <name>
-
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git remote show
-Cursor_basic
-master
-
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch second
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   second.txt
-
-no changes added to commit (use "git add" and/or "git commit -a")
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git branch
-  first
-  master
-* second
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git stash && git chackout first
-Saved working directory and index state WIP on second: bed5573 removing first.txt
-git: 'chackout' is not a git command. See 'git --help'.
-
-The most similar command is
-	checkout
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ echo "Hello" >second.txt
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ cat second.txt
+Hello
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git stash && git checkout first
-No local changes to save
+Saved working directory and index state WIP on second: 078d463 removing
 Switched to branch 'first'
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git branch
-* first
-  master
-  second
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git checkout second && git stash pop
 Switched to branch 'second'
 On branch second
@@ -187,123 +83,85 @@ Changes not staged for commit:
 	modified:   second.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
-Dropped refs/stash@{0} (9ed64d7885196dc1e14516257cbe0857df5612d9)
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git add
-Nothing specified, nothing added.
-Maybe you wanted to say 'git add .'?
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch second
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	modified:   second.txt
-
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git add --all
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch second
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	modified:   second.txt
-
+Dropped refs/stash@{0} (820676aac8ca0a3f170669f77b1a7a67e78d3e1a)
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git add second.txt
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch second
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	modified:   second.txt
-
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git commit -m "Changing second.txt"
-[second 518a368] Changing second.txt
+[second b869365] Changing second.txt
  1 file changed, 1 insertion(+)
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push
-fatal: No configured push destination.
-Either specify the URL from the command-line or configure a remote repository using
-
-    git remote add <name> <url>
-
-and then push using the remote name
-
-    git push <name>
-
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch second
-nothing to commit, working tree clean
-
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push second
-fatal: The current branch second has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream second second
-
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push -u https://github.com/VitaliiRevenko/Cursor_basic second
-Username for 'https://github.com': RevenkoVitalii
-Password for 'https://RevenkoVitalii@github.com': 
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push origin second
+Username for 'https://github.com': vitaliireevnko
+Password for 'https://vitaliireevnko@github.com': 
 remote: Invalid username or password.
-fatal: Authentication failed for 'https://github.com/VitaliiRevenko/Cursor_basic/'
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push -u https://github.com/VitaliiRevenko/Cursor_basic second
-Username for 'https://github.com': VitaliiRevenko
-Password for 'https://VitaliiRevenko@github.com': 
+fatal: Authentication failed for 'https://github.com/VitaliiRevenko/cursor_git_hw.git/'
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push origin second
+Username for 'https://github.com': vitaliirevenko
+Password for 'https://vitaliirevenko@github.com': 
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
-Writing objects: 100% (3/3), 264 bytes | 264.00 KiB/s, done.
+Writing objects: 100% (3/3), 265 bytes | 132.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 remote: 
 remote: Create a pull request for 'second' on GitHub by visiting:
-remote:      https://github.com/VitaliiRevenko/Cursor_basic/pull/new/second
+remote:      https://github.com/VitaliiRevenko/cursor_git_hw/pull/new/second
 remote: 
-To https://github.com/VitaliiRevenko/Cursor_basic
+To https://github.com/VitaliiRevenko/cursor_git_hw.git
  * [new branch]      second -> second
-Branch 'second' set up to track remote branch 'second' from 'https://github.com/VitaliiRevenko/Cursor_basic'.
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git branch
-  first
-  master
-* second
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git checkout first
 Switched to branch 'first'
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ echo "Cursor" >second.txt
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ cat second.txt
+Cursor
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git add second.txt
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git commit -m "Changing second.txt"
+[first a7596b3] Changing second.txt
+ 1 file changed, 1 insertion(+)
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git branch
 * first
   master
   second
-
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git status
-On branch first
-nothing to commit, working tree clean
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ echo "Cursor" >second.txt
-
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push -u https://github.com/VitaliiRevenko/Cursor_basic first
-Username for 'https://github.com': VitaliiRevenko
-Password for 'https://VitaliiRevenko@github.com': 
-Total 0 (delta 0), reused 0 (delta 0)
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push origin first
+Username for 'https://github.com': vitaliirevenko
+Password for 'https://vitaliirevenko@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 265 bytes | 132.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
 remote: 
 remote: Create a pull request for 'first' on GitHub by visiting:
-remote:      https://github.com/VitaliiRevenko/Cursor_basic/pull/new/first
+remote:      https://github.com/VitaliiRevenko/cursor_git_hw/pull/new/first
 remote: 
-To https://github.com/VitaliiRevenko/Cursor_basic
+To https://github.com/VitaliiRevenko/cursor_git_hw.git
  * [new branch]      first -> first
-Branch 'first' set up to track remote branch 'first' from 'https://github.com/VitaliiRevenko/Cursor_basic'.
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git checkout master
-M	second.txt
 Switched to branch 'master'
-Your branch is up to date with 'master/master'.
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git branch
-  first
-* master
-  second
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git merge second
-Updating bed5573..518a368
-error: Your local changes to the following files would be overwritten by merge:
-	second.txt
-Please commit your changes or stash them before you merge.
-Aborting
+Updating 078d463..b869365
+Fast-forward
+ second.txt | 1 +
+ 1 file changed, 1 insertion(+)
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git merge first
-Already up to date.
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ 
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git branch
-  first
-* master
-  second
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push -u https://github.com/VitaliiRevenko/Cursor_basic master
-Username for 'https://github.com': VitaliiRevenko
-Password for 'https://VitaliiRevenko@github.com': 
-Branch 'master' set up to track remote branch 'master' from 'https://github.com/VitaliiRevenko/Cursor_basic'.
-Everything up-to-date
-vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ 
+Auto-merging second.txt
+CONFLICT (content): Merge conflict in second.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ cat second.txt
+<<<<<<< HEAD
+Hello
+=======
+Cursor
+>>>>>>> first
+
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git add second.txt
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git commit -m "Resolve conflict second.txt"
+[master d967da8] Resolve conflict second.txt
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git push origin master
+Username for 'https://github.com': vitaliirevenko
+Password for 'https://vitaliirevenko@github.com': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Writing objects: 100% (3/3), 328 bytes | 328.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/VitaliiRevenko/cursor_git_hw.git
+   078d463..d967da8  master -> master
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$
