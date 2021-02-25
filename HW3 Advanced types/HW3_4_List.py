@@ -16,7 +16,7 @@ print(lst_to_sort_multilpy)
 
 list_A = [2, 3, 4]
 list_B = [5, 6, 7]
-new_list = list(map(lambda x, y: y if x < y else y, list_A, list_B))
+new_list = list(map(lambda x, y: x + y, list_A, list_B))
 print(new_list)
 
 # 24. Use reduce and lambda to compute the numbers of a lst_to_sort.
