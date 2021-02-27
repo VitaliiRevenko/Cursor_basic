@@ -41,7 +41,7 @@ print("Anna has {}  apples and {} peaches.".format(5, 10))
 
 # 8*. With indicators of field size (5 chars for the first and 3 for the second)
 
-print("Anna has {0:^4}  apples and {1:^2} peaches.".format(5, 10))
+print("Anna has {0:^5}  apples and {1:^3} peaches.".format(5, 10))
 
 # 9. With f-strings and variables
 
