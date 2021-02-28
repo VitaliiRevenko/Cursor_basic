@@ -17,11 +17,11 @@ lst_d.append(5)
 print(f"lst_d = {id(lst_d)}")
 #################################################
 # 3. Define the type of each object from step 1.
-for lst in lst_d:
-    print(type(lst))
 # 4*. Check the type of the objects by using isinstance.
-for lst in lst_d:
-    print(isinstance((lst), int))
+list_of_variables = [int_a, str_b, set_c, lst_d, dict_e]
+for lst_of_var in list_of_variables:
+    print(f"Type of variables: {lst_of_var} is \t{type(lst_of_var)}")
+    print(f"Check type, isinstance: {isinstance(lst_of_var,type(lst_of_var))}\n {50* '-'}")
 
 # String formatting:
 # Replace the placeholders with a value:
@@ -29,19 +29,19 @@ for lst in lst_d:
 #
 # 5. With .format and curly braces {}
 
-print("Anna has {apples}  apples and {peaches} peaches.".format(apples=5, peaches=10))
+print("Anna has {}  apples and {} peaches.".format(5, 10))
 
 # 6. By passing index numbers into the curly braces.
 
 print("Anna has {0}  apples and {1} peaches.".format(5, 10))
 
 # 7. By using keyword arguments into the curly braces.
-
-print("Anna has {}  apples and {} peaches.".format(5, 10))
+          
+print("Anna has {apples}  apples and {peaches} peaches.".format(apples=5, peaches=10))
 
 # 8*. With indicators of field size (5 chars for the first and 3 for the second)
 
-print("Anna has {0:^4}  apples and {1:^2} peaches.".format(5, 10))
+print("Anna has {0:^5}  apples and {1:^3} peaches.".format(5, 10))
 
 # 9. With f-strings and variables
 
