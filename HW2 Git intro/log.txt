@@ -152,6 +152,7 @@ Hello
 Cursor
 >>>>>>> first
 
+vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ edit second.txt
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git add second.txt
 vitalii@vitalii-VirtualBox:~/cursor/cursor_git_hw$ git commit -m "Resolve conflict second.txt"
 [master d967da8] Resolve conflict second.txt
