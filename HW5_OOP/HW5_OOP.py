@@ -19,7 +19,7 @@ laptop = Laptop()
 # 2.
 class Guitar:
     def __init__(self, guitar_string, guitar_type):
-        self.guitar_string = GuitarString
+        self.guitar_string = guitar_string
         self.guitar_type = guitar_type
 
 
@@ -68,7 +68,7 @@ class Pasta:
     def __init__(self, list_of_ingredients):
         self.list_of_ingredients = list_of_ingredients
 
-    def carbonara(self):
+    def carbonara(cls):
         return Pasta(['forcemeat', 'tomatoes'])
 
     @classmethod
@@ -164,6 +164,10 @@ class AddressBook:
         self.email = email
         self.birthday = birthday
         self.age = age
+
+    def __str__(self):
+        return f"(key: {self.key}, name: {self.name}, phone_number: {self.phone_number}, address: {self.address}," \
+               f"email: {self.email}, birthday: {self.birthday}, age: {self.age} )"
 
 
 # 9.
