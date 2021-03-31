@@ -68,6 +68,7 @@ class Pasta:
     def __init__(self, list_of_ingredients):
         self.list_of_ingredients = list_of_ingredients
 
+    @classmethod
     def carbonara(cls):
         return Pasta(['forcemeat', 'tomatoes'])
 
